@@ -1,4 +1,238 @@
+/* ----------------------
+   Reset & Base Styles
+   ----------------------
+   सर्व HTML एलिमेंट्सची मुळे सेट करणे, मार्जिन-पॅडिंग शून्य करणे
+----------------------- */
+* {
+  margin: 0;       /* सर्व जागा शून्य */
+  padding: 0;      /* सर्व पॅडिंग शून्य */
+  box-sizing: border-box; /* बॉर्डर, पॅडिंग सह आकार मोजा */
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* फॉण्ट */
+  line-height: 1.6;  /* ओळींच्या मधल्या अंतर */
+  background-color: #f7f7f7; /* पृष्ठाचा रंग */
+  color: #333;       /* मुख्य मजकुराचा रंग */
+}
+
+.container {
+  max-width: 1200px; /* कंटेनरची कमाल रुंदी */
+  margin: 0 auto;    /* मध्यभागी ठेवा */
+  padding: 1rem;     /* आतली जागा */
+}
+
+/* ----------------------
+   Header / Topbar
+   ----------------------
+   वरचा बार, लोगो आणि भाषा बटन्स
+----------------------- */
+.topbar {
+  background-color: #fff; /* पांढरा रंग */
+  border-bottom: 1px solid #ddd; /* खाली हलका बॉर्डर */
+  padding: 0.5rem 0;
+}
+
+.topbar .row {
+  display: flex;
+  justify-content: space-between; /* डावीकडून उजवीकडे */
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand .logo {
+  height: 50px;  /* लोगोची उंची */
+  margin-right: 0.75rem; /* लोगो आणि टेक्स्टमध्ये अंतर */
+}
+
+.brand-text .tagline {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.nav button {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  background: #007bff; /* निळा बटन */
+  color: #fff;          /* बटनवरील मजकूर पांढरा */
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 5px;   /* गोल कोपरे */
+  font-size: 0.9rem;
+}
+
+.nav button:hover {
+  background: #0056b3; /* hover वर गडद निळा */
+}
+
+/* ----------------------
+   Buttons (बटन्स)
+----------------------- */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin: 0.25rem 0;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3; /* hover वर गडद निळा */
+}
+
+.btn.primary {
+  background: #28a745; /* हिरवा बटन */
+}
+
+.btn.primary:hover {
+  background: #1e7e34;
+}
+
+.btn.small {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* ----------------------
+   Hero Section (मुख्य भाग)
+----------------------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* घटकांमध्ये अंतर */
+  padding: 2rem 0;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.hero-left h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left .lead {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.actions {
+  margin-bottom: 1.5rem;
+}
+
+.ad-area {
+  margin-top: 1rem;
+}
+
+/* ----------------------
+   Cards / Quick Info (कार्ड्स)
+----------------------- */
+.card {
+  background: #fff;      /* पांढरा कार्ड */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* हलकी सावली */
+}
+
+.card.mini {
+  font-size: 0.9rem;
+}
+
+/* ----------------------
+   Grid Layouts (ग्रिड)
+----------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tile h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #007bff; /* निळा हेडिंग */
+}
+
+.tile p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ----------------------
+   Steps Section (स्टेप्स)
+----------------------- */
+.steps ol {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.steps li {
+  margin-bottom: 0.75rem;
+}
+
+/* ----------------------
+   Footer (तळटीप)
+----------------------- */
+.footer {
+  background: #222; /* काळा फूट्टर */
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.foot-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ----------------------
+   Responsive (मोबाइलसाठी)
+----------------------- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .topbar .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
 :root{
   --primary: #0bce6b; /* green finance */
   --accent: #0b5fff;
