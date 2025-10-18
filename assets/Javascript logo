@@ -1,0 +1,36 @@
+// install canvas package first:
+// npm install canvas
+
+const { createCanvas, loadImage } = require('canvas');
+const fs = require('fs');
+const path = require('path');
+
+// PNG फाइलसाठी path
+const outputDir = path.join(__dirname, 'assets');
+if (!fs.existsSync(outputDir)){
+    fs.mkdirSync(outputDir);
+}
+const outputPath = path.join(outputDir, 'logo.png');
+
+// Canvas size
+const width = 256;
+const height = 256;
+const canvas = createCanvas(width, height);
+const ctx = canvas.getContext('2d');
+
+// Background color
+ctx.fillStyle = '#0bce6b';
+ctx.fillRect(0, 0, width, height);
+
+// Text
+ctx.fillStyle = 'white';
+ctx.font = 'bold 100px Arial';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText('TM', width / 2, height / 2);
+
+// Save as PNG
+const buffer = canvas.toBuffer('image/png');
+fs.writeFileSync(outputPath, buffer);
+
+console.log('Logo saved as', outputPath);
