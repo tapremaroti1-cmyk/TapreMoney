@@ -1,0 +1,7 @@
+TapreMoney_Pro/
+│
+├─ index.html
+├─ style.css
+└─ assets/
+     ├─ logo.png         (तुमचा लोगो)
+     └─ hero-bg.jpg      (हिरो बॅकग्राऊंड)
