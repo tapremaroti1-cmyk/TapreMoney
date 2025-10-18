@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TapreMoney – Earn Smart & Online">
+    <title>TapreMoney</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container header-container">
+        <img src="assets/logo.png" alt="TapreMoney Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#home">होम</a></li>
+                <li><a href="#about">आमच्याबद्दल</a></li>
+                <li><a href="#features">फीचर्स</a></li>
+                <li><a href="#contact">संपर्क</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container hero-container">
+        <h1>TapreMoney मध्ये स्वागत आहे!</h1>
+        <p>कमाई स्मार्ट & ऑनलाइन – सोप्या पद्धतीने पैसे मिळवा.</p>
+        <a href="#features" class="btn">आता सुरू करा</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h2>आमच्याबद्दल</h2>
+        <p>TapreMoney हे एक ऑनलाइन कमाई प्लॅटफॉर्म आहे जिथे तुम्ही स्मार्ट पद्धतीने पैसे कमवू शकता. आमची प्रणाली सोपी, सुरक्षित आणि विश्वासार्ह आहे.</p>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section">
+    <div class="container">
+        <h2>फीचर्स</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">💡</div>
+                <h3>सुलभ वापर</h3>
+                <p>सोपी आणि जलद कमाई करण्याची पद्धत.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔒</div>
+                <h3>सुरक्षित व्यवहार</h3>
+                <p>सर्व व्यवहार सुरक्षित आणि ट्रॅक करण्यायोग्य.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📱</div>
+                <h3>मोबाईल फ्रेंडली</h3>
+                <p>सर्व डिव्हाइसेसवर उत्कृष्ट अनुभव.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🕑</div>
+                <h3>24/7 सपोर्ट</h3>
+                <p>कधीही प्रश्न असतील तर आमचे टीम मदतीला तत्पर.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>संपर्क</h2>
+        <p>आमच्याशी संपर्क साधा: <a href="mailto:info@tapremoney.com">info@tapremoney.com</a></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 TapreMoney. सर्व हक्क राखीव आहेत.</p>
+    </div>
+</footer>
+
+</body>
+  </html>
+  /* ===== Global ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; scroll-behavior:smooth; }
+body { line-height:1.6; background:#f7f9fa; color:#333; }
+
+/* ===== Container ===== */
+.container { width:90%; max-width:1200px; margin:0 auto; padding:20px 0; }
+
+/* ===== Header ===== */
+header { background:#0bce6b; color:#fff; padding:15px 0; position:sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+header .logo { width:130px; vertical-align:middle; }
+header nav { display:inline-block; float:right; }
+header nav ul { list-style:none; }
+header nav ul li { display:inline-block; margin-left:25px; }
+header nav ul li a { color:#fff; text-decoration:none; font-weight:500; transition:0.3s; }
+header nav ul li a:hover { color:#000; }
+
+/* ===== Hero Section ===== */
+.hero { background:linear-gradient(rgba(11,206,107,0.85), rgba(11,206,107,0.85)), url('assets/hero-bg.jpg') no-repeat center center/cover; color:#fff; text-align:center; padding:140px 20px; border-radius:0 0 20px 20px; }
+.hero h1 { font-size:3rem; margin-bottom:20px; text-shadow:0 2px 6px rgba(0,0,0,0.3); }
+.hero p { font-size:1.2rem; margin-bottom:30px; }
+.hero .btn { background:linear-gradient(135deg,#0bce6b,#0aa35a); color:#fff; padding:16px 38px; border-radius:12px; text-decoration:none; font-weight:700; transition:0.3s; display:inline-block; }
+.hero .btn:hover { background:linear-gradient(135deg,#0aa35a,#0bce6b); transform:translateY(-3px); }
+
+/* ===== About Section ===== */
+.about-section { padding:80px 0; text-align:center; }
+.about-section h2 { font-size:2.8rem; color:#0bce6b; margin-bottom:20px; }
+.about-section p { font-size:1.15rem; max-width:750px; margin:0 auto 40px; }
+
+/* ===== Features Section ===== */
+.features-section { padding:80px 0; text-align:center; background:#eafaf1; }
+.features-section h2 { font-size:2.8rem; color:#0bce6b; margin-bottom:40px; }
+.features-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.feature-card { background:#fff; padding:30px; border-radius:16px; box-shadow:0 6px 25px rgba(0,0,0,0.12); flex:1 1 250px; transition:0.3s; position:relative; }
+.feature-card:hover { transform:translateY(-10px); box-shadow:0 10px 30px rgba(0,0,0,0.18); }
+.feature-card h3 { color:#0bce6b; margin-bottom:10px; font-size:1.3rem; }
+.feature-card p { color:#555; font-size:1rem; }
+.feature-card .icon { font-size:2.5rem; margin-bottom:15px; }
+
+/* ===== Contact Section ===== */
+.contact-section { padding:80px 0; text-align:center; }
+.contact-section h2 { font-size:2.5rem; color:#0bce6b; margin-bottom:20px; }
+.contact-section p a { color:#0bce6b; text-decoration:none; font-weight:600; }
+.contact-section p a:hover { text-decoration:underline; }
+
+/* ===== Footer ===== */
+footer { background:#0bce6b; color:#fff; padding:25px 0; text-align:center; font-size:0.95rem; }
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    header nav { float:none; margin-top:10px; }
+    header nav ul li { display:block; margin:10px 0; }
+    .hero h1 { font-size:2rem; }
+    .features-grid { flex-direction:column; gap:20px; }
+}
