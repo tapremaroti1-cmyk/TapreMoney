@@ -1,0 +1,22 @@
+TapreMoney/
+│
+├─ index.html
+├─ about.html
+├─ contact.html
+├─ privacy.html
+├─ terms.html
+├─ faq.html
+├─ testimonials.html
+│
+├─ assets/
+│   ├─ logo.png          → ✍️ बदलून तुमचा लोगो ठेवा
+│   ├─ style.css         → Full styling
+│   ├─ sample-video.mp4  → ✍️ बदलून तुमचा व्हिडिओ ठेवा
+│   └─ images/           → Gallery / Photos placeholders
+│       ├─ photo1.jpg
+│       ├─ photo2.jpg
+│       └─ photo3.jpg
+│
+├─ sitemap.xml           → Google indexing साठी
+├─ robots.txt           → SEO crawling साठी
+└─ README.md            → Project instructions
