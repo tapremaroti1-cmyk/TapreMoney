@@ -1,144 +1,241 @@
 <!DOCTYPE html>
-<html lang="Tapre Money">
+<html lang="mr">
 <head>
-  <link rel="stylesheet" href="style.css" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TapreMoney — Earn Smart & Online | कमाई स्मार्ट पद्धतीने</title>
-  <meta name="description" content="TapreMoney — Earn Smart & Online. Mobile friendly platform to learn and earn via ads, referrals and affiliate programs. | मोबाइलसाठी उपयुक्त डिजिटल कमाई प्लॅटफॉर्म" />
-  <meta name="keywords" content="TapreMoney, online earning, make money, digital income, adsense, affiliate marketing, कमाई" />
-  <meta name="author" content="Maroti Tapre" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="TapreMoney — Earn Smart & Online" />
-  <meta property="og:description" content="TapreMoney — Smart ways to earn online. Join, learn and monetize your skills." />
-  <meta property="og:image" content="assets/logo.png" />
-  <meta property="og:url" content="https://tapremoney.github.io" />
-  <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google AdSense (pub-1360993859385449 ads) -->
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1360993859385449" crossorigin="anonymous"></script>
-  <script>
-    function setLang(lang){
-      document.documentElement.lang = (lang === 'mr') ? 'mr' : 'en';
-      document.querySelectorAll('[data-en]').forEach(el => el.style.display = (lang==='en')? 'inline' : 'none');
-      document.querySelectorAll('[data-mr]').forEach(el => el.style.display = (lang==='mr')? 'inline' : 'none');
-      localStorage.setItem('tapre_lang', lang);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TapreMoney | कोड माहिती केंद्र</title>
+  <style>
+    /* === बेस थीम === */
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f7fff9;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-    document.addEventListener('DOMContentLoaded', ()=>{
-      const saved = localStorage.getItem('tapre_lang') || (navigator.language && navigator.language.startsWith('mr')? 'mr' : 'en');
-      setLang(saved);
-      try{ (adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){}
-    });
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1360993859385449" crossorigin="anonymous"></script>
+
+    /* === हेडर === */
+    header {
+      background: linear-gradient(90deg, #0bce6b, #00a35a);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+    header h1 {
+      font-size: 1.5em;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+
+    /* === मुख्य कंटेंट === */
+    main {
+      text-align: center;
+      padding: 30px 10px;
+    }
+    h2 {
+      color: #0bce6b;
+      margin-bottom: 20px;
+    }
+
+    /* === शोध बॉक्स === */
+    #searchInput {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px 15px;
+      border: 2px solid #0bce6b;
+      border-radius: 8px;
+      font-size: 1em;
+      outline: none;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    #searchInput:focus {
+      box-shadow: 0 0 8px rgba(11,206,107,0.5);
+    }
+
+    /* === टेबल === */
+    table {
+      width: 95%;
+      margin: auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    th {
+      background: #0bce6b;
+      color: white;
+      padding: 14px;
+      font-size: 1.05em;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+    }
+    tr:nth-child(even) {
+      background: #f3fff7;
+    }
+    tr:hover {
+      background: #d7ffe4;
+      transition: 0.3s;
+    }
+    .type {
+      font-weight: 600;
+      color: #00724e;
+    }
+
+    /* === फूटर === */
+    footer {
+      background: #0bce6b;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+
+    /* === मोबाईल सुसंगतता === */
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 1.2em;
+      }
+      #searchInput {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container row">
-      <div class="brand">
-        <img src="assets/logo.png" alt="TapreMoney logo" class="logo" />
-        <div class="brand-text">
-          <div class="en" data-en>TapreMoney</div>
-          <div class="mr" data-mr>TapreMoney</div>
-          <small class="tagline"><span data-en>Earn Smart & Online</span><span data-mr>कमाई स्मार्ट पद्धतीने</span></small>
-        </div>
-      </div>
-      <nav class="nav">
-        <button class="btn small" onclick="setLang('en')">English</button>
-        <button class="btn small" onclick="setLang('mr')">मराठी</button>
-      </nav>
+
+  <!-- हेडर -->
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="assets/logo.png" alt="TapreMoney Logo">
+      <h1>TapreMoney | कोड माहिती केंद्र</h1>
     </div>
   </header>
 
-  <main class="container hero">
-    <section class="hero-left">
-      <h1><span data-en>Start Earning Online Today</span><span data-mr>आजच ऑनलाइन कमाई सुरु करा</span></h1>
-      <p class="lead">
-        <span data-en>Join TapreMoney to explore simple and proven ways to earn — AdSense, referrals and affiliate programs.</span>
-        <span data-mr>TapreMoney मध्ये सामील व्हा आणि जाहिरात, रिफरल व अ‍ॅफिलिएट प्रोग्रॅमद्वारे कमवण्याचे सोपे मार्ग शोधा.</span>
-      </p>
+  <!-- मुख्य भाग -->
+  <main>
+    <h2>💻 कोडचे प्रकार, उपयोग आणि उदाहरण फाइल्स</h2>
 
-      <div class="actions">
-        <a class="btn primary" href="#get-started"><span data-en>Get Started</span><span data-mr>कमाई सुरु करा</span></a>
-        <a class="btn" href="#how"><span data-en>How it works</span><span data-mr>कसे कार्य करते</span></a>
-      </div>
+    <!-- 🔍 शोध बॉक्स -->
+    <input type="text" id="searchInput" placeholder="शोधा उदा. Python, HTML, Backend..." onkeyup="filterTable()">
 
-      <div class="ad-area">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-1360993859385449"
-             data-ad-slot=""
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){} </script>
-      </div>
-    </section>
-
-    <aside class="hero-right">
-      <div class="card">
-        <h3><span data-en>Quick Ways to Earn</span><span data-mr>त्वरित कमाईचे मार्ग</span></h3>
-        <ul>
-          <li><span data-en>Read short tasks and earn rewards</span><span data-mr>लहान टास्क पूर्ण करून बक्षीस मिळवा</span></li>
-          <li><span data-en>Share referral links</span><span data-mr>रिफरल लिंक शेअर करा</span></li>
-          <li><span data-en>Use affiliate offers</span><span data-mr>अ‍ॅफिलिएट ऑफर्स वापरा</span></li>
-        </ul>
-        <a href="#signup" class="btn small block"><span data-en>Sign up free</span><span data-mr>विनामूल्य नोंदणी</span></a>
-      </div>
-
-      <div class="card mini">
-        <h4><span data-en>Support</span><span data-mr>संपर्क</span></h4>
-        <p><span data-en>Email: support@tapremoney.com</span><span data-mr>ईमेल: support@tapremoney.com</span></p>
-      </div>
-    </aside>
+    <table id="codeTable">
+      <tr>
+        <th>क्रमांक</th>
+        <th>कोड प्रकार</th>
+        <th>मुख्य भाषा</th>
+        <th>उपयोग</th>
+        <th>उदाहरण फाइल्स</th>
+      </tr>
+      <tr>
+        <td>1️⃣</td>
+        <td class="type">Frontend (User Side)</td>
+        <td>HTML, CSS, JavaScript</td>
+        <td>वेबसाईटचे डिझाईन व यूजर इंटरफेस तयार करणे</td>
+        <td>.html, .css, .js</td>
+      </tr>
+      <tr>
+        <td>2️⃣</td>
+        <td class="type">Backend (Server Side)</td>
+        <td>Python, PHP, Node.js, Java</td>
+        <td>डेटा प्रोसेसिंग आणि सर्व्हर लॉजिक</td>
+        <td>.py, .php, .js, .java</td>
+      </tr>
+      <tr>
+        <td>3️⃣</td>
+        <td class="type">Database</td>
+        <td>SQL, MongoDB, Firebase</td>
+        <td>डेटा साठवणे आणि मिळवणे</td>
+        <td>.sql, .json</td>
+      </tr>
+      <tr>
+        <td>4️⃣</td>
+        <td class="type">Mobile App</td>
+        <td>Java, Kotlin, Swift, Dart</td>
+        <td>Android व iOS अॅप तयार करणे</td>
+        <td>.kt, .java, .swift, .dart</td>
+      </tr>
+      <tr>
+        <td>5️⃣</td>
+        <td class="type">Game Development</td>
+        <td>C#, C++, JavaScript</td>
+        <td>गेम्स तयार करणे</td>
+        <td>.cpp, .cs, .js</td>
+      </tr>
+      <tr>
+        <td>6️⃣</td>
+        <td class="type">AI / Machine Learning</td>
+        <td>Python, R, Julia</td>
+        <td>कृत्रिम बुद्धिमत्ता आणि डेटा प्रशिक्षण</td>
+        <td>.py, .ipynb, .r</td>
+      </tr>
+      <tr>
+        <td>7️⃣</td>
+        <td class="type">System / Hardware</td>
+        <td>C, C++, Rust</td>
+        <td>ऑपरेटिंग सिस्टीम, ड्रायव्हर व हार्डवेअर</td>
+        <td>.c, .cpp, .rs</td>
+      </tr>
+      <tr>
+        <td>8️⃣</td>
+        <td class="type">Automation / Scripting</td>
+        <td>Python, Bash, PowerShell</td>
+        <td>स्वयंचलित टास्क व स्क्रिप्टिंग</td>
+        <td>.py, .sh, .ps1</td>
+      </tr>
+      <tr>
+        <td>9️⃣</td>
+        <td class="type">Blockchain / Web3</td>
+        <td>Solidity, Rust, Move</td>
+        <td>क्रिप्टो आणि स्मार्ट कॉन्ट्रॅक्ट</td>
+        <td>.sol, .rs, .move</td>
+      </tr>
+      <tr>
+        <td>🔟</td>
+        <td class="type">Data Science / Analytics</td>
+        <td>Python, R, SQL</td>
+        <td>डेटा विश्लेषण व रिपोर्ट्स</td>
+        <td>.py, .r, .sql, .csv</td>
+      </tr>
+    </table>
   </main>
 
-  <section id="how" class="container how">
-    <h2><span data-en>How TapreMoney Works</span><span data-mr>TapreMoney कसे कार्य करते</span></h2>
-    <div class="grid">
-      <div class="tile">
-        <h3><span data-en>Ads & Content</span><span data-mr>जाहिराती व सामग्री</span></h3>
-        <p><span data-en>Earn by viewing curated content and ads.</span><span data-mr>निर्दिष्ट सामग्री व जाहिराती पाहून कमवा.</span></p>
-      </div>
-      <div class="tile">
-        <h3><span data-en>Referrals</span><span data-mr>रिफरल</span></h3>
-        <p><span data-en>Invite friends and get rewards.</span><span data-mr>मित्रांना आमंत्रित करा व बक्षिसे मिळवा.</span></p>
-      </div>
-      <div class="tile">
-        <h3><span data-en>Affiliate Offers</span><span data-mr>अ‍ॅफिलिएट ऑफर्स</span></h3>
-        <p><span data-en>Promote offers and keep commission.</span><span data-mr>ऑफर्स प्रमोशन करून कमिशन मिळवा.</span></p>
-      </div>
-    </div>
-
-    <div class="ad-area wide">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-1360993859385449"
-           data-ad-slot=""
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){} </script>
-    </div>
-  </section>
-
-  <section id="get-started" class="container steps">
-    <h2><span data-en>Get Started — 3 Steps</span><span data-mr>3 सोप्या स्टेप्स</span></h2>
-    <ol>
-      <li><strong><span data-en>Sign up</span><span data-mr>नोंदणी करा</span></strong> — Create your free account.</li>
-      <li><strong><span data-en>Complete tasks</span><span data-mr>टास्क पूर्ण करा</span></strong> — View content, share links.</li>
-      <li><strong><span data-en>Withdraw</span><span data-mr>उपसंपादन</span></strong> — Cash out via supported methods.</li>
-    </ol>
-  </section>
-
-  <footer class="footer">
-    <div class="container foot-inner">
-      <p>© 2025 TapreMoney — <span data-en>All rights reserved</span><span data-mr>सर्व अधिकार राखीव</span></p>
-      <nav>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </nav>
-    </div>
+  <!-- फूटर -->
+  <footer>
+    © 2025 TapreMoney | तयार केलेले: ChatGPT सहायक
   </footer>
+
+  <!-- शोध बॉक्स स्क्रिप्ट -->
+  <script>
+    function filterTable() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById("codeTable");
+      const tr = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < tr.length; i++) {
+        const row = tr[i];
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
