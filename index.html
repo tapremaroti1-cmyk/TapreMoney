@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TapreMoney – स्मार्ट ऑनलाइन उत्पन्न प्लॅटफॉर्म</title>
+<meta name="description" content="TapreMoney – डिजिटल पद्धतीने सुरक्षित आणि जलद पैसे कमवा!">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<header id="navbar">
+    <img src="assets/logo.png" alt="TapreMoney Logo">
+    <h1>TapreMoney</h1>
+    <h2>स्मार्ट ऑनलाइन उत्पन्न प्लॅटफॉर्म</h2>
+    <p>डिजिटल पद्धतीने सुरक्षित आणि जलद पैसे कमवा!</p>
+    <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
+    <button id="mode-toggle" class="btn">Dark Mode</button>
+</header>
+
+<section id="stats" class="live-stats">
+    <div class="stat-card">
+        <h3 id="users-count">0</h3>
+        <p>Users Online</p>
+    </div>
+    <div class="stat-card">
+        <h3 id="earnings-count">₹0</h3>
+        <p>Total Earnings</p>
+    </div>
+    <div class="stat-card">
+        <h3 id="payouts-count">₹0</h3>
+        <p>Payouts Completed</p>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="feature-card">
+        <div class="front">
+            <span class="material-icons feature-icon">task_alt</span>
+            <h3>Daily Tasks</h3>
+        </div>
+        <div class="back">
+            <p>रोजचे challenges पूर्ण करून बोनस मिळवा!</p>
+        </div>
+    </div>
+    <div class="feature-card">
+        <div class="front">
+            <span class="material-icons feature-icon">leaderboard</span>
+            <h3>Referral Program</h3>
+        </div>
+        <div class="back">
+            <p>मित्रांना invite करा आणि बोनस मिळवा!</p>
+        </div>
+    </div>
+    <div class="feature-card">
+        <div class="front">
+            <span class="material-icons feature-icon">payments</span>
+            <h3>Instant Payouts</h3>
+        </div>
+        <div class="back">
+            <p>पैसे लगेच खात्यात मिळवा!</p>
+        </div>
+    </div>
+</section>
+
+<section id="tasks" class="progress-tasks">
+    <h2>Daily Tasks Progress</h2>
+    <div class="task-bar"><p>Task 1</p><div class="progress"><div class="progress-fill" style="width:60%"></div></div></div>
+    <div class="task-bar"><p>Task 2</p><div class="progress"><div class="progress-fill" style="width:80%"></div></div></div>
+</section>
+
+<section id="testimonials" class="testimonials-carousel">
+    <h2>User Testimonials</h2>
+    <div class="carousel-card">"TapreMoney ने माझे उत्पन्न वाढवले!" - अमित</div>
+    <div class="carousel-card">"Referral bonuses खूप उपयुक्त आहेत." - स्नेहा</div>
+    <div class="carousel-card">"Daily tasks मजेशीर आणि सोपे आहेत." - रोहित</div>
+</section>
+
+<div class="cta-section">
+    <h2>तुम्ही तयार आहात का?</h2>
+    <p>आजच नोंदणी करा आणि डिजिटल उत्पन्न सुरू करा!</p>
+    <a href="signup.html" class="btn btn-cta">Sign Up Now</a>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <div class="column"><h4>Company</h4><a href="#">About</a><a href="#">Blog</a></div>
+        <div class="column"><h4>Support</h4><a href="#">FAQ</a><a href="#">Contact</a></div>
+        <div class="column"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+    <p>&copy; 2025 TapreMoney. सर्व हक्क राखीव.</p>
+    <div class="social-icons">
+        <span class="material-icons">facebook</span>
+        <span class="material-icons">instagram</span>
+        <span class="material-icons">twitter</span>
+    </div>
+    <div class="newsletter">
+        <input type="email" placeholder="तुमचा ईमेल टाका">
+        <button>Subscribe</button>
+    </div>
+</footer>
+
+<script>
+let u=0,e=50000,p=20000;
+const users=document.getElementById('users-count');
+const earnings=document.getElementById('earnings-count');
+const payouts=document.getElementById('payouts-count');
+setInterval(()=>{
+    if(u<1250) users.innerText=++u;
+    if(e<50000) earnings.innerText="₹"+(e+=500);
+    if(p<20000) payouts.innerText="₹"+(p+=200);
+},50);
+
+document.getElementById('mode-toggle').addEventListener('click',()=>{
+    document.body.classList.toggle('dark-mode');
+});
+</script>
+
+</body>
+</html>
