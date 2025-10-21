@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>टॅप्रेमनी – स्मार्ट ऑनलाइन उत्पन्न प्लॅटफॉर्म</title>
+<meta name="description" content="टॅप्रेमनीसह डिजिटल पद्धतीने सुरक्षित आणि जलद पैसे कमवा!">
+<meta name="keywords" content="टॅप्रेमनी, ऑनलाइन उत्पन्न, पैसे कमवा, डिजिटल कमाई, ओपन सोर्स">
+<meta name="author" content="TapreMoney">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<header id="navbar">
+    <img src="assets/logo.png" alt="TapreMoney Logo">
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#features">Features</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#referrals">Referral</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#cta">Get Started</a>
+    </nav>
+    <button id="mode-toggle" class="btn">Dark Mode</button>
+</header>
+
+<section class="hero">
+    <h1>टॅप्रेमनी</h1>
+    <p>स्मार्ट ऑनलाइन उत्पन्न प्लॅटफॉर्म – कमाई करा, बोनस मिळवा, मजा करा!</p>
+    <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
+</section>
+
+<section id="dashboard" class="gamified-dashboard">
+    <div class="level-card">
+        <h3>Level 5</h3>
+        <p>XP: 450 / 500</p>
+        <div class="progress-bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+    <div class="badge-card">🏆 Achievements Unlocked</div>
+    <div class="live-feed">
+        <h4>Recent Payouts</h4>
+        <ul id="live-feed-list">
+            <li>राहुल ने ₹500 कमावले</li>
+            <li>स्नेहा ने ₹300 कमावले</li>
+        </ul>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="feature-card">
+        <div class="front">
+            <span class="material-icons">task_alt</span>
+            <h3>Interactive Tasks</h3>
+        </div>
+        <div class="back">
+            <p>Complete daily challenges and earn rewards!</p>
+        </div>
+    </div>
+    <div class="feature-card">
+        <div class="front">
+            <span class="material-icons">leaderboard</span>
+            <h3>Referral Tree</h3>
+        </div>
+        <div class="back">
+            <p>Visual network map showing your referral tree.</p>
+        </div>
+    </div>
+    <div class="feature-card">
+        <div class="front">
+            <span class="material-icons">payments</span>
+            <h3>Instant Payouts</h3>
+        </div>
+        <div class="back">
+            <p>Direct bank or wallet payout immediately.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tasks" class="progress-tasks">
+    <h2>Daily Tasks</h2>
+    <div class="task-bar"><p>Task 1</p><div class="progress"><div class="progress-fill" style="width:60%"></div></div></div>
+    <div class="task-bar"><p>Task 2</p><div class="progress"><div class="progress-fill" style="width:80%"></div></div></div>
+</section>
+
+<section id="referrals" class="referral-map">
+    <h2>Animated Referral Map</h2>
+    <div class="map-placeholder"></div>
+</section>
+
+<section id="testimonials" class="testimonials-carousel">
+    <h2>User Testimonials</h2>
+    <div class="carousel-card">"टॅप्रेमनीने माझे उत्पन्न वाढवले!" - अमित</div>
+    <div class="carousel-card">"Referral bonuses खूप उपयुक्त आहेत." - स्नेहा</div>
+    <div class="carousel-card">"Daily tasks मजेशीर आणि सोपे आहेत." - रोहित</div>
+</section>
+
+<section id="cta" class="cta-section">
+    <h2>Ready to start?</h2>
+    <p>आजच नोंदणी करा आणि डिजिटल उत्पन्न सुरू करा!</p>
+    <a href="signup.html" class="btn btn-cta">Sign Up Now</a>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <div class="column"><h4>Company</h4><a href="#">About</a><a href="#">Blog</a></div>
+        <div class="column"><h4>Support</h4><a href="#">FAQ</a><a href="#">Contact</a></div>
+        <div class="column"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+    <p>&copy; 2025 TapreMoney</p>
+    <div class="social-icons">
+        <span class="material-icons">facebook</span>
+        <span class="material-icons">instagram</span>
+        <span class="material-icons">twitter</span>
+    </div>
+    <div class="newsletter">
+        <input type="email" placeholder="तुमचा ईमेल टाका">
+        <button>Subscribe</button>
+    </div>
+</footer>
+
+<script>
+// Live counters
+let u=0,e=50000,p=20000;
+const users=document.getElementById('users-count');
+const earnings=document.getElementById('earnings-count');
+const payouts=document.getElementById('payouts-count');
+setInterval(()=>{
+    if(u<1250) users.innerText=++u;
+    if(e<50000) earnings.innerText="₹"+(e+=500);
+    if(p<20000) payouts.innerText="₹"+(p+=200);
+},50);
+
+// Dark/Light mode
+document.getElementById('mode-toggle').addEventListener('click',()=>{
+    document.body.classList.toggle('dark-mode');
+});
+</script>
+
+</body>
+</html>
